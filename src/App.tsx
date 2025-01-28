@@ -43,7 +43,7 @@ export function getReorderedGoods(
   } else if (sortType === SortType.LENGTH) {
     visibleGoods.sort((a, b) => +a.length - b.length);
   } else if (sortType === SortType.NONE && isReversed === false) {
-    return goodsFromServer;
+    return visibleGoods;
   }
 
   if (isReversed) {
